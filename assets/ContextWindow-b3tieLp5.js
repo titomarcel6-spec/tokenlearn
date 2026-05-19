@@ -1,6 +1,6 @@
-import { u as d, r as g, M as u, j as e, __tla as __tla_0 } from "./index-eVjePRSC.js";
-import { S as p, __tla as __tla_1 } from "./StageCard-pHlcZboa.js";
-import { m as b, __tla as __tla_2 } from "./proxy-Dcgb-_mq.js";
+import { u as d, r as g, M as u, j as e, __tla as __tla_0 } from "./index-Ep7dxLJ3.js";
+import { S as p, __tla as __tla_1 } from "./StageCard-Dze6Omqr.js";
+import { m as f, __tla as __tla_2 } from "./proxy-Dw4aJrTv.js";
 let k;
 let __tla = Promise.all([
     (()=>{
@@ -22,7 +22,7 @@ let __tla = Promise.all([
     k = function() {
         const o = d((t)=>t.tokens), r = d((t)=>t.selectedModelId);
         d((t)=>t.contextUsedPct);
-        const i = u[r], [a, c] = g.useState([]), [f, x] = g.useState(o.length), n = f, m = Math.min(100, n / i.contextWindow * 100), h = n > i.contextWindow;
+        const i = u[r], [l, c] = g.useState([]), [b, x] = g.useState(o.length), n = b, m = Math.min(100, n / i.contextWindow * 100), h = n > i.contextWindow;
         function w() {
             const t = Math.floor(Math.random() * 120) + 30;
             c((s)=>[
@@ -38,14 +38,14 @@ let __tla = Promise.all([
             c([]), x(o.length);
         }
         return e.jsxs("div", {
-            className: "max-w-3xl mx-auto",
+            className: "max-w-3xl mx-auto px-4 sm:px-0",
             children: [
                 e.jsx("div", {
-                    className: "grid grid-cols-2 gap-3 mb-5 sm:grid-cols-4",
+                    className: "grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3 mb-5",
                     children: Object.values(u).map((t)=>{
-                        const s = Math.min(100, o.length / t.contextWindow * 100), l = t.id === r;
+                        const s = Math.min(100, o.length / t.contextWindow * 100), a = t.id === r;
                         return e.jsxs("div", {
-                            className: `rounded-xl border p-3 ${l ? "border-indigo-400/40 bg-indigo-500/5" : "border-white/[0.07] bg-[#16161a]"}`,
+                            className: `rounded-xl border p-3 ${a ? "border-indigo-400/40 bg-indigo-500/5" : "border-white/[0.07] bg-[#16161a]"}`,
                             children: [
                                 e.jsx("div", {
                                     className: "text-[11px] text-white/40 mb-1",
@@ -102,7 +102,7 @@ let __tla = Promise.all([
                         e.jsxs("div", {
                             className: "relative h-8 rounded-lg bg-[#0f0f12] border border-white/[0.07] overflow-hidden",
                             children: [
-                                e.jsx(b.div, {
+                                e.jsx(f.div, {
                                     className: `h-full rounded-lg ${h ? "bg-red-500/70" : "bg-indigo-500/70"}`,
                                     animate: {
                                         width: `${m}%`
@@ -153,7 +153,7 @@ let __tla = Promise.all([
                     subtitle: "Each message adds to the running total. Watch the bar fill up.",
                     children: [
                         e.jsxs("div", {
-                            className: "flex gap-2 mb-4",
+                            className: "flex flex-col sm:flex-row gap-2 mb-4",
                             children: [
                                 e.jsx("button", {
                                     onClick: w,
@@ -167,13 +167,13 @@ let __tla = Promise.all([
                                 })
                             ]
                         }),
-                        a.length === 0 && e.jsx("p", {
+                        l.length === 0 && e.jsx("p", {
                             className: "text-sm text-white/25 italic",
                             children: 'Click "Add message" to simulate a multi-turn chat.'
                         }),
                         e.jsx("div", {
                             className: "flex flex-col gap-2 max-h-60 overflow-y-auto pr-1",
-                            children: a.map((t, s)=>e.jsxs(b.div, {
+                            children: l.map((t, s)=>e.jsxs(f.div, {
                                     initial: {
                                         opacity: 0,
                                         y: 6
@@ -202,7 +202,7 @@ let __tla = Promise.all([
                                                 "+",
                                                 t.tokens,
                                                 " tokens · total: ",
-                                                o.length + a.slice(0, s + 1).reduce((l, v)=>l + v.tokens, 0)
+                                                o.length + l.slice(0, s + 1).reduce((a, v)=>a + v.tokens, 0)
                                             ]
                                         })
                                     ]

@@ -1,7 +1,7 @@
-import { u as a, r as u, j as t, f, M as v, __tla as __tla_0 } from "./index-eVjePRSC.js";
-import { S as c, __tla as __tla_1 } from "./StageCard-pHlcZboa.js";
-import { T as w, __tla as __tla_2 } from "./TokenChip-DaQSHZwk.js";
-import { m as d, __tla as __tla_3 } from "./proxy-Dcgb-_mq.js";
+import { u as s, r as u, j as t, f, M as v, __tla as __tla_0 } from "./index-Ep7dxLJ3.js";
+import { S as c, __tla as __tla_1 } from "./StageCard-Dze6Omqr.js";
+import { T as w, __tla as __tla_2 } from "./TokenChip-BC0UnSBT.js";
+import { m as d, __tla as __tla_3 } from "./proxy-Dw4aJrTv.js";
 let C;
 let __tla = Promise.all([
     (()=>{
@@ -49,14 +49,14 @@ let __tla = Promise.all([
         }
     ];
     C = function() {
-        const o = a((e)=>e.rawText), s = a((e)=>e.setRawText), l = a((e)=>e.tokens), x = a((e)=>e.tokenizerReady), m = a((e)=>e.selectedModelId), h = a((e)=>e.totalCostUSD), p = a((e)=>e.contextUsedPct), b = v[m], g = u.useCallback((e)=>s(e.target.value), [
-            s
+        const o = s((e)=>e.rawText), a = s((e)=>e.setRawText), l = s((e)=>e.tokens), x = s((e)=>e.tokenizerReady), m = s((e)=>e.selectedModelId), p = s((e)=>e.totalCostUSD), h = s((e)=>e.contextUsedPct), g = v[m], b = u.useCallback((e)=>a(e.target.value), [
+            a
         ]), i = l.slice(0, 120), r = l.length - i.length;
         return t.jsxs("div", {
-            className: "max-w-3xl mx-auto",
+            className: "max-w-3xl mx-auto px-4 sm:px-0",
             children: [
                 t.jsx("div", {
-                    className: "grid grid-cols-4 gap-3 mb-5",
+                    className: "grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3 mb-5",
                     children: [
                         {
                             label: "Tokens",
@@ -68,11 +68,11 @@ let __tla = Promise.all([
                         },
                         {
                             label: "Context",
-                            value: `${p.toFixed(3)}%`
+                            value: `${h.toFixed(3)}%`
                         },
                         {
                             label: "Input cost",
-                            value: f(h),
+                            value: f(p),
                             accent: !0
                         }
                     ].map((e)=>t.jsxs("div", {
@@ -94,11 +94,11 @@ let __tla = Promise.all([
                 }),
                 t.jsxs(c, {
                     title: "Your text",
-                    subtitle: x ? `Tokenized with tiktoken cl100k_base · ${b?.name ?? ""}` : "Loading tiktoken WASM tokenizer…",
+                    subtitle: x ? `Tokenized with tiktoken cl100k_base · ${g?.name ?? ""}` : "Loading tiktoken WASM tokenizer…",
                     children: [
                         t.jsx("textarea", {
                             value: o,
-                            onChange: g,
+                            onChange: b,
                             rows: 6,
                             placeholder: "Type or paste any text…",
                             className: "w-full bg-[#0f0f12] border border-white/[0.07] rounded-lg px-4 py-3 text-sm text-white/80 resize-none outline-none focus:border-indigo-400/40 transition-colors leading-relaxed",
@@ -110,7 +110,7 @@ let __tla = Promise.all([
                         t.jsx("div", {
                             className: "flex flex-wrap gap-2 mt-3",
                             children: j.map((e)=>t.jsx("button", {
-                                    onClick: ()=>s(e.text),
+                                    onClick: ()=>a(e.text),
                                     className: "text-[11px] px-3 py-1 rounded-full border border-white/[0.1] text-white/40 hover:text-white/70 hover:border-white/20 transition-colors",
                                     children: e.label
                                 }, e.label))

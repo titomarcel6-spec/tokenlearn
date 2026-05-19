@@ -1,8 +1,8 @@
-import { u as i, r as m, j as e, M as h, __tla as __tla_0 } from "./index-eVjePRSC.js";
-import { S as o, __tla as __tla_1 } from "./StageCard-pHlcZboa.js";
-import { T as p, __tla as __tla_2 } from "./TokenChip-DaQSHZwk.js";
-import { A as f, __tla as __tla_3 } from "./index-DpFSEC25.js";
-import { m as u, __tla as __tla_4 } from "./proxy-Dcgb-_mq.js";
+import { u as i, r as m, j as e, M as h, __tla as __tla_0 } from "./index-Ep7dxLJ3.js";
+import { S as o, __tla as __tla_1 } from "./StageCard-Dze6Omqr.js";
+import { T as p, __tla as __tla_2 } from "./TokenChip-BC0UnSBT.js";
+import { A as f, __tla as __tla_3 } from "./index-BIuVZOqr.js";
+import { m as u, __tla as __tla_4 } from "./proxy-Dw4aJrTv.js";
 let k;
 let __tla = Promise.all([
     (()=>{
@@ -32,14 +32,14 @@ let __tla = Promise.all([
     })()
 ]).then(async ()=>{
     k = function() {
-        const s = i((t)=>t.tokens), l = i((t)=>t.selectedModelId);
+        const s = i((t)=>t.tokens), r = i((t)=>t.selectedModelId);
         i((t)=>t.tokenizerReady);
-        const n = h[l], [r, d] = m.useState(!1), c = s.slice(0, 20).map((t)=>t.id).join(", "), x = s.length > 20;
+        const n = h[r], [l, d] = m.useState(!1), c = s.slice(0, 20).map((t)=>t.id).join(", "), x = s.length > 20;
         return e.jsxs("div", {
-            className: "max-w-3xl mx-auto",
+            className: "max-w-3xl mx-auto px-4 sm:px-0",
             children: [
                 e.jsxs("div", {
-                    className: "flex items-center justify-between mb-4",
+                    className: "flex flex-col gap-3 md:flex-row md:items-center justify-between mb-4",
                     children: [
                         e.jsxs("div", {
                             className: "text-sm text-white/40",
@@ -57,9 +57,9 @@ let __tla = Promise.all([
                         }),
                         e.jsxs("button", {
                             onClick: ()=>d((t)=>!t),
-                            className: "text-[12px] px-3 py-1.5 rounded-lg border border-white/[0.1] text-white/50 hover:text-white/80 hover:border-white/20 transition-colors",
+                            className: "w-full md:w-auto text-[12px] px-3 py-1.5 rounded-lg border border-white/[0.1] text-white/50 hover:text-white/80 hover:border-white/20 transition-colors",
                             children: [
-                                r ? "Hide" : "Show",
+                                l ? "Hide" : "Show",
                                 " token IDs"
                             ]
                         })
@@ -98,7 +98,7 @@ let __tla = Promise.all([
                                         children: e.jsx(p, {
                                             token: t,
                                             colorIndex: a,
-                                            showId: r
+                                            showId: l
                                         })
                                     }, `${t.id}-${a}`))
                             })

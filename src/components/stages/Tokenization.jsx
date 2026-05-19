@@ -21,9 +21,9 @@ export default function Tokenization() {
   const hasMore = tokens.length > 20
 
   return (
-    <div className="max-w-3xl mx-auto">
+    <div className="max-w-3xl mx-auto px-4 sm:px-0">
       {/* Controls */}
-      <div className="flex items-center justify-between mb-4">
+      <div className="flex flex-col gap-3 md:flex-row md:items-center justify-between mb-4">
         <div className="text-sm text-white/40">
           {tokens.length} tokens
           {model?.estimated && (
@@ -34,7 +34,7 @@ export default function Tokenization() {
         </div>
         <button
           onClick={() => setShowIds((v) => !v)}
-          className="text-[12px] px-3 py-1.5 rounded-lg border border-white/[0.1] text-white/50 hover:text-white/80 hover:border-white/20 transition-colors"
+          className="w-full md:w-auto text-[12px] px-3 py-1.5 rounded-lg border border-white/[0.1] text-white/50 hover:text-white/80 hover:border-white/20 transition-colors"
         >
           {showIds ? 'Hide' : 'Show'} token IDs
         </button>

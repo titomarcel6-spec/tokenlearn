@@ -37,9 +37,9 @@ export default function ContextWindow() {
   }
 
   return (
-    <div className="max-w-3xl mx-auto">
+    <div className="max-w-3xl mx-auto px-4 sm:px-0">
       {/* Model comparison */}
-      <div className="grid grid-cols-2 gap-3 mb-5 sm:grid-cols-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3 mb-5">
         {Object.values(MODELS).map((m) => {
           const pct = Math.min(100, (tokens.length / m.contextWindow) * 100)
           const isSelected = m.id === selectedModelId
@@ -110,7 +110,7 @@ export default function ContextWindow() {
         title="Conversation accumulation"
         subtitle="Each message adds to the running total. Watch the bar fill up."
       >
-        <div className="flex gap-2 mb-4">
+        <div className="flex flex-col sm:flex-row gap-2 mb-4">
           <button
             onClick={addMessage}
             className="text-sm px-4 py-2 rounded-lg bg-indigo-500/15 text-indigo-300 border border-indigo-500/25 hover:bg-indigo-500/25 transition-colors"

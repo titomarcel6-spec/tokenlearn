@@ -14,13 +14,13 @@ const GenerationSim = lazy(() => import('./components/stages/GenerationSim'))
 
 export default function App() {
   return (
-    <div className="flex h-screen bg-[#0f0f12] text-[#e8e8f0] overflow-hidden">
+    <div className="flex min-h-screen flex-col md:flex-row bg-[#0f0f12] text-[#e8e8f0] overflow-hidden">
       <Sidebar />
 
       <div className="flex flex-col flex-1 min-w-0">
         <TopBar />
 
-        <main className="flex-1 overflow-y-auto p-6">
+        <main className="flex-1 overflow-y-auto p-6 pb-24 md:pb-6">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/"             element={<Navigate to="/input" replace />} />

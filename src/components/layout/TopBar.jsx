@@ -23,7 +23,7 @@ export default function TopBar() {
   const contextUsedPct  = usePipelineStore((s) => s.contextUsedPct)
 
   return (
-    <header className="flex items-center justify-between px-6 py-3 border-b border-white/[0.07] bg-[#0f0f12]/80 backdrop-blur sticky top-0 z-10">
+    <header className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-6 py-3 border-b border-white/[0.07] bg-[#0f0f12]/80 backdrop-blur sticky top-0 z-10">
       {/* Stage info */}
       <div>
         <h1
@@ -36,7 +36,7 @@ export default function TopBar() {
       </div>
 
       {/* Live stats + model selector */}
-      <div className="flex items-center gap-4">
+      <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
         {/* Mini stat pills */}
         <div className="hidden sm:flex items-center gap-3 text-[12px]">
           <Pill label="tokens" value={tokenCount.toLocaleString()} />
@@ -48,7 +48,7 @@ export default function TopBar() {
         <select
           value={selectedModelId}
           onChange={(e) => setSelectedModel(e.target.value)}
-          className="text-[12px] bg-slate-900/90 border border-white/[0.12] rounded-lg px-3 py-1.5 text-white cursor-pointer hover:bg-slate-900 transition-colors outline-none focus:border-indigo-400/60"
+          className="w-full sm:w-auto text-[12px] bg-slate-900/90 border border-white/[0.12] rounded-lg px-3 py-1.5 text-white cursor-pointer hover:bg-slate-900 transition-colors outline-none focus:border-indigo-400/60"
           style={{ fontFamily: 'var(--font-mono)' }}
         >
 

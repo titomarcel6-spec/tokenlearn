@@ -34,9 +34,9 @@ export default function TextInput() {
   const overflow = tokens.length - visibleTokens.length
 
   return (
-    <div className="max-w-3xl mx-auto">
+    <div className="max-w-3xl mx-auto px-4 sm:px-0">
       {/* Stats row */}
-      <div className="grid grid-cols-4 gap-3 mb-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3 mb-5">
         {[
           { label: 'Tokens',      value: tokens.length.toLocaleString() },
           { label: 'Characters',  value: rawText.length.toLocaleString() },

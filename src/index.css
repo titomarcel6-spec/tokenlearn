@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Design tokens ───────────────────────────────────────── */
+:root {
+  --font-display: 'DM Serif Display', serif;
+  --font-body:    'DM Sans', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  /* Token chip palette — 6 rotating hues */
+  --tok-0-bg: #e0e7ff; --tok-0-fg: #3730a3;
+  --tok-1-bg: #d1fae5; --tok-1-fg: #065f46;
+  --tok-2-bg: #fef3c7; --tok-2-fg: #92400e;
+  --tok-3-bg: #fce7f3; --tok-3-fg: #9d174d;
+  --tok-4-bg: #dbeafe; --tok-4-fg: #1e40af;
+  --tok-5-bg: #dcfce7; --tok-5-fg: #14532d;
+}
+
+/* ── Base styles ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: #0f0f12;
+  color: #e8e8f0;
+}
+
+/* ── Token chip ──────────────────────────────────────────── */
+.tok-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 3px;
+  padding: 2px 7px 3px;
+  border-radius: 5px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1.4;
+  cursor: default;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  white-space: pre;
+}
+.tok-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+.tok-chip .tok-id {
+  font-size: 0.62rem;
+  opacity: 0.6;
+}
+
+/* Rotating palette */
+.tok-chip:nth-child(6n+1) { background: var(--tok-0-bg); color: var(--tok-0-fg); }
+.tok-chip:nth-child(6n+2) { background: var(--tok-1-bg); color: var(--tok-1-fg); }
+.tok-chip:nth-child(6n+3) { background: var(--tok-2-bg); color: var(--tok-2-fg); }
+.tok-chip:nth-child(6n+4) { background: var(--tok-3-bg); color: var(--tok-3-fg); }
+.tok-chip:nth-child(6n+5) { background: var(--tok-4-bg); color: var(--tok-4-fg); }
+.tok-chip:nth-child(6n+6) { background: var(--tok-5-bg); color: var(--tok-5-fg); }
+
+/* ── Scrollbar ───────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #333344; border-radius: 3px; }
